@@ -11,6 +11,5 @@ import Header from "./components/Header.svelte";
 </main>
 
 <style>
-  
 
 </style>
