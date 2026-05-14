@@ -1,15 +1,9 @@
 <script>
-import Swatches from "./components/Swatches.svelte";
-import Header from "./components/Header.svelte";
-
+  import Hero          from '$lib/components/Hero.svelte';
+  import Glossary      from '$lib/components/Glossary.svelte';
+  import HowIMadeThis  from '$lib/components/HowIMadeThis.svelte';
 </script>
 
-<main>
-  <Header />
-  <Swatches />
-
-</main>
-
-<style>
-
-</style>
+<Hero />
+<Glossary />
+<HowIMadeThis />
