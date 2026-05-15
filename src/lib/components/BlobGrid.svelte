@@ -57,12 +57,30 @@
       to bottom,
       transparent 0px,
       transparent 100px,
-      #d8d8d8 100px,
-      #d8d8d8 108px,
+      var(--color-border-secondary) 100px,
+      var(--color-border-secondary) 108px,
       transparent 108px,
       transparent 132px
     );
     padding-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .shelf-grid {
+      grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+      grid-auto-rows: 88px;
+      column-gap: 8px;
+      row-gap: 16px;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 78px,
+        var(--color-border-secondary) 78px,
+        var(--color-border-secondary) 85px,
+        transparent 85px,
+        transparent 104px
+      );
+    }
   }
 
 </style>

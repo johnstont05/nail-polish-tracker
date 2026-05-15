@@ -1,61 +1,79 @@
 :root {
-  font-family: var(--sans);
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text: #000000;
+  --text-h: #000;
+  --border: #616161;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: 'Poppins', system-ui, sans-serif;
+    --display: 'Poppins', sans-serif;
+  --sans: 'Roboto', sans-serif;
 
-  /* colors — light mode */
-  --color-text-primary:         #1a1a1a;
-  --color-text-secondary:       #555;
-  --color-text-tertiary:        #999;
-  --color-background-primary:   #fff;
-  --color-background-secondary: #f5f5f5;
-  --color-border-secondary:     #ddd;
-  --color-border-tertiary:      #ebebeb;
-  --border-radius-lg:           12px;
+--black: #000;
+--white: #fff;
+--gray: #f5f5f5;
 
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
+  --color-text-primary: var(--black);
+  --color-text-secondary: #777777;
+  --color-background-primary: var(--white);
+  --color-background-secondary: var(--gray);
+  --color-border-secondary: #d8d8d8;
 
-/* font sizes */
+  /* Typography scales */
+  --10px: 0.625rem;
   --12px: 0.75rem;
   --14px: 0.875rem;
   --16px: 1rem;
   --18px: 1.125rem;
   --20px: 1.25rem;
+  --22px: 1.375rem;
   --24px: 1.5rem;
   --28px: 1.75rem;
   --32px: 2rem;
   --36px: 2.25rem;
   --40px: 2.5rem;
+  --44px: 2.75rem;
   --48px: 3rem;
+  --56px: 3.5rem;
   --64px: 4rem;
-}
+  --80px: 5rem;
+  --96px: 6rem;
+  --112px: 7rem;
+  --128px: 8rem;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text-primary:         #f0f0f0;
-    --color-text-secondary:       #aaa;
-    --color-text-tertiary:        #666;
-    --color-background-primary:   #111;
-    --color-background-secondary: #1e1e1e;
-    --color-border-secondary:     #333;
-    --color-border-tertiary:      #2a2a2a;
+
+
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
   }
 }
 
-body {
+
+html, body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
+  overflow-x: hidden;
 }

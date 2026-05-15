@@ -11,7 +11,6 @@
     dispatch('select', { polish, index });
   }
 
-  let el;
   let hovered = false;
   let tooltipX = 0;
   let tooltipY = 0;
@@ -20,27 +19,9 @@
 
   $: tooltipVisible = hovered && positioned;
 
-  $: if (selected && el) {
-    if (!hovered) positioned = false;
-    setTimeout(() => {
-      if (!el || !selected) return;
-      anchorToBottle();
-      positioned = true;
-    }, 160);
-  }
-
-  function anchorToBottle() {
-    const r = el.getBoundingClientRect();
-    const rawX = r.right + 8;
-    tooltipFlipped = rawX + 170 > window.innerWidth;
-    tooltipX = tooltipFlipped ? r.left - 178 : rawX;
-    tooltipY = r.top;
-    if (tooltipY + 200 > window.innerHeight) tooltipY = r.bottom - 200;
-  }
-
-  function onMouseEnter(e) { hovered = true; if (!selected) { updateTooltip(e); positioned = true; } }
-  function onMouseMove(e)  { if (!selected) updateTooltip(e); }
-  function onMouseLeave()  { hovered = false; if (!selected) positioned = false; }
+  function onMouseEnter(e) { hovered = true; updateTooltip(e); positioned = true; }
+  function onMouseMove(e)  { updateTooltip(e); }
+  function onMouseLeave()  { hovered = false; positioned = false; }
   function updateTooltip(e) {
     const rawX = e.clientX + 12;
     tooltipFlipped = rawX + 170 > window.innerWidth;
@@ -53,8 +34,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-  bind:this={el}
-  class="np-swatch"
+class="np-swatch"
   class:selected
   on:click={handleClick}
   on:mouseenter={onMouseEnter}
@@ -115,7 +95,7 @@
 </div>
 
 {#if tooltipVisible}
-  <div class="np-tooltip" class:tail-flipped={tooltipFlipped} style="left:{tooltipX}px; top:{tooltipY}px" aria-hidden="true">
+  <div class="np-tooltip" style="left:{tooltipX}px; top:{tooltipY}px" aria-hidden="true">
     {#if polish.image}
       <img class="np-tooltip-img" src={polish.image} alt={polish.name} />
     {/if}
@@ -163,50 +143,25 @@
 
   .np-tooltip {
     position: fixed;
-    background: var(--color-background-primary);
-    border: 0.5px solid var(--color-border-secondary);
-    border-radius: var(--border-radius-lg, 10px);
-    padding: 10px 12px 32px;
+    background: var(--white);
+    border: 1.5px solid var(--black);
+    border-radius: 5px;
+    padding: 10px 12px;
     z-index: 9999;
     pointer-events: none;
-    min-width: 160px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    isolation: isolate;
-  }
-
-  /* tail — points left by default (tooltip is right of element) */
-  .np-tooltip::before {
-    content: '';
-    position: absolute;
-    top: 14px;
-    left: -6px;
-    width: 10px;
-    height: 10px;
-    background: var(--color-background-primary);
-    border-left: 0.5px solid var(--color-border-secondary);
-    border-bottom: 0.5px solid var(--color-border-secondary);
-    transform: rotate(45deg);
-  }
-
-  /* flipped — tooltip is left of element, tail points right */
-  .np-tooltip.tail-flipped::before {
-    left: auto;
-    right: -6px;
-    border-left: none;
-    border-bottom: none;
-    border-right: 0.5px solid var(--color-border-secondary);
-    border-top: 0.5px solid var(--color-border-secondary);
+    width: 170px;
+    box-sizing: border-box;
   }
 
   .np-badge {
     position: absolute;
-    bottom: 10px;
-    left: 12px;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 99px;
-    background: var(--color-background-secondary);
-    color: var(--color-text-secondary);
+    top: 10px;
+    right: 12px;
+    font-size: var(--12px);
+    padding: 2px 3px;
+    border-radius: 5px;
+    background: var(--black);
+    color: var(--white);
   }
 
   .np-tooltip-img {
@@ -220,13 +175,14 @@
 
   .np-tooltip-name {
     font-weight: 500;
-    font-size: 13px;
+    font-size: var(--16px);
     color: var(--color-text-primary);
     margin-bottom: 2px;
   }
 
   .np-tooltip-brand {
     color: var(--color-text-secondary);
-    font-size: 11px;
+    font-size: var(--14px);
   }
+
 </style>

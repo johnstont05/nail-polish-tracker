@@ -13,23 +13,18 @@ export const POLISH_ORDER = [
   "#f7ac68", // City that Never Peach
   "#f1e394", // Eternal Sunshine
   "#184430", // Stay Off the Lawn!!
-
   "#59662c", // Retro Remix
-
   "#adb24e", // Pear-adise Cove
   "#92b48f", // Pound the Pave-mint
   "#213e58", // Mind Your Mittens
   "#6c7a91", // Petal Pushers
-
   "#0042b2", // It's Brittney, Beach
   "#0255bd", // Sturdy Sapphire
   "#7aa4d1", // Babe Blue
   "#d7f1f6", // Bad Tendencies
-
   "#136960", // Besties
   "#0ebaa4", // Made in Jade
   "#2c1e27", // What are you A-Freight of?
-
   "#566195", // Mermaid Charade
   "#857fae", // Day Dreamer
   "#b2aadc", // Let Me Go

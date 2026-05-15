@@ -67,6 +67,7 @@ export async function fetchPolishes() {
         brand:     row.brand?.trim() ?? '',
         hex,
         image:     row.image?.trim() ?? '',
+        link:      row.url?.trim() ?? '',
         family:    hexToFamily(hex),
         finish:    TYPE_TO_FINISH[type] ?? 'solid',
         lightness: l,

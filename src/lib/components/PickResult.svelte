@@ -38,7 +38,7 @@
   }
 
   .pick-name {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--sans);
     font-style: italic;
     font-size: 18px;
     color: var(--color-text-primary);

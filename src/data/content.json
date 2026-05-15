@@ -1,0 +1,211 @@
+{
+  "content": [
+    {
+      "type": "hero",
+      "value": {
+        "title": "The Glossary",
+        "description": "There's nothing worse than getting home from the store with a new nail polish and realizing you already own something similar. This is my fix – every shade I own, so next time I'm at the store I actually know what's on my shelf. Click or hover over any bottle to see more information.",
+        "byline": "By <b><a href=\"https://taylorfayjohnston.com/\">Taylor Johnston</a></b>",
+        "date": "Published May 2026"
+      }
+    },
+    {
+      "type": "polishes",
+      "value": {
+        "methodology": {
+          "headline": "How I made this",
+          "text": [
+            {
+              "type": "text",
+              "value": "The data lives in a Google Sheet – each row is a polish with its name, brand, hex value, finish type  and a swatch photo. The app fetches it directly, so adding a new polish to my collection is as simple as adding a row."
+            },
+            {
+              "type": "text",
+              "value": "Every bottle is a custom SVG I drew in Illustrator, filled with the actual hex value of each shade. The finish type is stored in the sheet and controls how the bottle renders: metallics get a diagonal shimmer gradient, glitters get crosshatch sparkles."
+            },
+            {
+              "type": "text",
+              "value": "Getting the hex values right took some trial and error. I ended up using a Chrome eyedropper extension on sourced swatch photos to pull the most accurate color for each shade. I also used Figma to sketch out the layout before writing any code. The app is built with Svelte, hosted on Netlify, and copy is managed with ArchieML."
+            },
+            {
+              "type": "text",
+              "value": "View the source code for this page on <a href=\"https://github.com/johnstont05/nail-polish-tracker\">GitHub</a>."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text",
+      "value": "Library of components"
+    },
+    {
+      "type": "text",
+      "value": "Datawrapper graphic"
+    },
+    {
+      "type": "text",
+      "value": "{.dw_gfx}"
+    },
+    {
+      "type": "text",
+      "value": "id: Unique string of 5 letters and numbers. How to find your datawrapper ID"
+    },
+    {
+      "type": "text",
+      "value": "width: float-left, float-right, text-width, large, wide, full. optional – defaults to text-width"
+    },
+    {
+      "type": "text",
+      "value": "altText: Describe your chart. This will not appear on the page, but is important for accessibility"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    },
+    {
+      "type": "text",
+      "value": "Custom graphic"
+    },
+    {
+      "type": "text",
+      "value": "{.custom_gfx}"
+    },
+    {
+      "type": "text",
+      "value": "hed: This is a custom graphic headline"
+    },
+    {
+      "type": "text",
+      "value": "description: This is the chatter that goes below the headline"
+    },
+    {
+      "type": "text",
+      "value": "note: This is an optional note that goes below the graphic"
+    },
+    {
+      "type": "text",
+      "value": "credits: Chart: XXX &bull; Source: XXX"
+    },
+    {
+      "type": "text",
+      "value": "width: float-left, float-right, text-width, large, wide, full. optional – defaults to text-width"
+    },
+    {
+      "type": "text",
+      "value": "altText: Describe your chart. This will not appear on the page, but is important for accessibility"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    },
+    {
+      "type": "text",
+      "value": "Subhead"
+    },
+    {
+      "type": "text",
+      "value": "{.subhed}"
+    },
+    {
+      "type": "text",
+      "value": "text: Text here"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    },
+    {
+      "type": "text",
+      "value": "Photos"
+    },
+    {
+      "type": "text",
+      "value": "{.photo}"
+    },
+    {
+      "type": "text",
+      "value": "url: https://assets1.cbsnewsstatic.com/hub/i/2026/01/13/c88c837e-81a4-4a93-96d7-2e7dc7241e41/screenshot-2026-01-12-183156.png"
+    },
+    {
+      "type": "text",
+      "value": "caption: Photo caption text goes here"
+    },
+    {
+      "type": "text",
+      "value": "credit: Photographer name / Outlet"
+    },
+    {
+      "type": "text",
+      "value": "width: float-left, float-right, text-width, large, wide, full. optional – defaults to text-width"
+    },
+    {
+      "type": "text",
+      "value": "altText: Describe your photo. This will not appear on the page, but is important for accessibility"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    },
+    {
+      "type": "text",
+      "value": "Methodology"
+    },
+    {
+      "type": "text",
+      "value": "{.methodology}"
+    },
+    {
+      "type": "text",
+      "value": "headline: About the data"
+    },
+    {
+      "type": "text",
+      "value": "[+.text]"
+    },
+    {
+      "type": "text",
+      "value": "First graph"
+    },
+    {
+      "type": "text",
+      "value": "Another graph"
+    },
+    {
+      "type": "text",
+      "value": "[]"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    },
+    {
+      "type": "text",
+      "value": "Bulleted list"
+    },
+    {
+      "type": "text",
+      "value": "{.bulleted-list}"
+    },
+    {
+      "type": "text",
+      "value": "[+.list]"
+    },
+    {
+      "type": "text",
+      "value": "This is a line of text."
+    },
+    {
+      "type": "text",
+      "value": "This is another line of text."
+    },
+    {
+      "type": "text",
+      "value": "[]"
+    },
+    {
+      "type": "text",
+      "value": "{}"
+    }
+  ]
+}
