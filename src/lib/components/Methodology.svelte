@@ -6,7 +6,7 @@
   <div class="toggle-label">How I made this</div>
 
   <div class="content">
-    <p>I kept buying polishes I already owned — the store lighting makes every color look different from what's at home. So I built this: a live catalog of every shade on my shelf, matched to its actual hex color, that I can pull up while I'm shopping.</p>
+    <p>I don't want to buy similar polishes to what I already own — the store lighting makes every color look different from what's at home. So I built this: a live catalog of every shade on my shelf, matched to its actual hex color, that I can pull up while I'm shopping.</p>
     <p>Each polish is logged in a Google Sheet with its name, brand, hex value, finish type, and a swatch photo. The app fetches that sheet directly and renders every bottle as a custom SVG illustration I drew myself.</p>
 
     {#if open}
@@ -22,6 +22,7 @@
 <style>
   .methodology-container {
     max-width: 640px;
+    font-family: var(--sans);
     width: 100%;
     margin: 3rem auto 2rem;
     border-top: 1.5px solid var(--color-border-secondary);

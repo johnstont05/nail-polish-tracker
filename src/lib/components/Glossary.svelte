@@ -41,7 +41,7 @@
   .glossary-page {
     max-width: 860px;
     margin: 0 auto;
-    padding: 1.5rem 1.5rem 4rem;
+    padding: 1.5rem 1.5rem 2rem;
   }
 
   .loading-center {
@@ -49,13 +49,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 40vh;
     gap: 1rem;
-  }
-
-  .loading-text {
-    font-size: 13px;
-    color: var(--color-text-secondary);
   }
 
   .loading-bottle {
@@ -66,6 +61,11 @@
   @keyframes bob {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-12px); }
+  }
+
+  .loading-text {
+    font-size: 13px;
+    color: var(--color-text-secondary);
   }
 
   .status.error {
