@@ -17,7 +17,7 @@
           "text": [
             {
               "type": "text",
-              "value": "The data lives in a Google Sheet – each row is a polish with its name, brand, hex value, finish type  and a swatch photo. The app fetches it directly, so adding a new polish to my collection is as simple as adding a row."
+              "value": "The data lives in a Google Sheet – each row is a polish with its name, brand, hex value, finish type  and a swatch photo. The app fetches it directly, so adding a new polish gto my collection is as simple as adding a row."
             },
             {
               "type": "text",
@@ -25,7 +25,7 @@
             },
             {
               "type": "text",
-              "value": "Getting the hex values right took some trial and error. I ended up using a Chrome eyedropper extension on sourced swatch photos to pull the most accurate color for each shade. I also used Figma to sketch out the layout before writing any code. The app is built with Svelte, hosted on Netlify, and copy is managed with ArchieML."
+              "value": "I used <a href=\"http://figma.com\">Figma</a> to sketch out the layout before writing any code. The app is built with <a href=\"https://svelte.dev/\">Svelte</a>, hosted on <a href=\"https://www.netlify.com/\">Netlify</a> and copy is managed with <a href=\"https://archieml.org/\">ArchieML</a>. Swatch photos are sourced, not my own."
             },
             {
               "type": "text",

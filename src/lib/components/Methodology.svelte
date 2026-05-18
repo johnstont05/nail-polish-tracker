@@ -52,6 +52,9 @@
   @media (max-width: 600px) {
     .methodology-container {
       padding: 0 1.25rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      width: auto;
     }
   }
 </style>

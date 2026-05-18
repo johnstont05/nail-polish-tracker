@@ -151,6 +151,7 @@ class="np-swatch"
     pointer-events: none;
     width: 170px;
     box-sizing: border-box;
+    line-height: 1.3;
   }
 
   .np-badge {
