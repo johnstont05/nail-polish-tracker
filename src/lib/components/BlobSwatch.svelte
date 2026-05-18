@@ -22,6 +22,7 @@
   function onMouseEnter(e) { hovered = true; updateTooltip(e); positioned = true; }
   function onMouseMove(e)  { updateTooltip(e); }
   function onMouseLeave()  { hovered = false; positioned = false; }
+  function dismiss()       { hovered = false; positioned = false; }
   function updateTooltip(e) {
     const rawX = e.clientX + 12;
     tooltipFlipped = rawX + 170 > window.innerWidth;
@@ -30,6 +31,8 @@
     if (tooltipY + 200 > window.innerHeight) tooltipY = e.clientY - 200;
   }
 </script>
+
+<svelte:window on:scroll={dismiss} />
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
